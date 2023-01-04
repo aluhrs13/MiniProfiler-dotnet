@@ -109,7 +109,7 @@ namespace StackExchange.Profiling
 #if NETCOREAPP3_1 // TODO: Evaluate if this works after http/2 local support in preview 7, maybe backport to netcoreapp2.1
                 if (appendServerTimingHeader && mp != null)
                 {
-                    context.Response.AppendTrailer("Server-Timing", mp.GetServerTimingHeader());
+                    context.Response.AppendTrailer("Server-Timing", "missedCache");
                 }
 #endif
             }
